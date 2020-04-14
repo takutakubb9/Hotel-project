@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get 'pages/info'
-root to: redirect('/ideas')	
+  get 'pages/info'	
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 get 'contacts/new', to: 'contacts#new', as: 'new_contact'
