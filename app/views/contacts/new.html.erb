@@ -1,0 +1,22 @@
+<h1>お問い合わせページ</h1>
+
+<%= form_with(model: @contact, local: true) do |form| %>
+<!-- name -->
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :contact_name %>
+  </div>
+  <!-- email -->
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :contact_email %>
+  </div>  
+  <!-- content -->
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body, id: :contact_body %>
+  </div>
+  <div class="actions">
+    <%= form.submit '送信', class: "btn btn-success" %>
+  </div>
+<% end %>

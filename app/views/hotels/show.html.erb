@@ -1,0 +1,13 @@
+<h1>ホテルの詳細ページ</h1>
+
+<div class="row">
+  <div class="col-md-9">
+  <%= image_tag(@hotel.picture_url, width: 300) if @hotel.picture.present? %>  
+      </div>
+
+  <div class="col-md-3">
+    <p><b>Name: </b><%= @hotel.name %></p>
+    <p><b>Description: </b><%= @hotel.description %></p>
+  </div>
+  <p><%= link_to 'ホテルのレビュー', hotel_reviews_path(@hotel) %></p>
+</div>

@@ -1,0 +1,7 @@
+<p>ホテルのレビュー</p>
+<% @reviews.each do |review| %>
+  <p>
+  <p><%= review.name %><p/>
+  <p><%= review.body %><p/>
+  </p>
+<% end %>
